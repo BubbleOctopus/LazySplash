@@ -107,8 +107,8 @@ public class ViewPagerFragment extends LazyViewPagerFragment {
       使用按照以上两步骤就阔以了，使用相对简单，最后补充一句啊，不要忘记了引入类库，这里是我自己定义，所以大家需要自己下载下来项目，手动引入下拉。。
     
     
-    #LICENSE
-    Copyright 2015-2016 AigeStudio
+#LICENSE
+    Copyright 2015-2016 liemng
     
     Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.
     
