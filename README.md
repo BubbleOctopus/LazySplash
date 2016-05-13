@@ -86,23 +86,23 @@ fetchResourceId()这里获取的是你的布局文件的Id，也也就是R.layou
 getAnimaList()这里就是设定动画的方法，现在仅仅支持平移动画，所以这里直接写死了，等后续看着在引入泛型支持多种类型的动画。
 这里插入下代码说明下：
 
-  /**
-   * Created by liemng on 16-5-13.
-   */
-  public class OneFragment extends PageFragment {
-      private static final String TAG = OneFragment.class.getSimpleName();
-  
-      @Override
-      public int fetchResourceId() {
-          return R.layout.one_layout;
-      }
-  
-      @Override
-      public TranslationAnim[] getAnimList() {
-          return new TranslationAnim[]{
-              new TranslationAnim(R.id.img_one, false, 3)
-          };
-      }
+     /**
+     * Created by liemng on 16-5-13.
+     */
+    public class OneFragment extends PageFragment {
+        private static final String TAG = OneFragment.class.getSimpleName();
+    
+        @Override
+        public int fetchResourceId() {
+            return R.layout.one_layout;
+        }
+
+    @Override
+    public TranslationAnim[] getAnimList() {
+        return new TranslationAnim[]{
+            new TranslationAnim(R.id.img_one, false, 3)
+        };
+    }
   }
 
 这里主要想说的是TranslationAnim这里的参数：R.id.img_one这个id就是你的布局文件（R.layout.XXX.）中的一个item，false代表平移动画的方向，如果是true就是正向移动，false是反向移动，这里的方向依据是你viewpager的滑动方向，第三个参数就是一个滑动因子，当然越大滑动的平移就是越小，大小是大于零，最大值暂时未设置，最好不要太大，如果太大其实进行位置移动的过程中就会越小，过大自然也就看不出移动效果了。
