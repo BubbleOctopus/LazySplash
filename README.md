@@ -15,22 +15,22 @@ Splash页面
 指定的item的颜色的方法。
 例如Demo app:
 
-  /**
-   * Created by liemng on 16-5-13.
-   */
-  public class ViewPagerFragment extends LazyViewPagerFragment {
+    /**
+     * Created by liemng on 16-5-13.
+     */
+    public class ViewPagerFragment extends LazyViewPagerFragment {
     private static final String TAG = ViewPagerFragment.class.getSimpleName();
-
     private static final int PAGE_NUM = 3;
+
     private static final int PAGE_ONE = 0;
     private static final int PAGE_TWO = 1;
     private static final int PAGE_THREE = 2;
-    
+
     @Override
     public int getCount() {
         return PAGE_NUM;
     }
-    
+
     @Override
     public PageFragment getItem(int position) {
         position %= PAGE_NUM;
@@ -52,7 +52,7 @@ Splash页面
         }
         return mPagerFragment;
     }
-    
+
     @Override
     public int getColor(int position) {
         position %= PAGE_NUM;
@@ -73,10 +73,10 @@ Splash页面
                     Log.d(TAG,"unknow index fetch color, position:" + position);
                 break;
         }
-        
+
         return result;
+      }
     }
-  }
   
 为控制器填充item，这里的item实现方式需要继承类PageFragment实现其内部方法fetchResourceId()和方法getAnimList();
 例如Demo app：
