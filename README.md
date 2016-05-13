@@ -113,7 +113,7 @@ getAnimaList()这里就是设定动画的方法，现在仅仅支持平移动画
     
     
 #LICENSE
-Copyright 2015-2016 liemng
+Copyright 2016-2018 liemng
 
 Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.
 
