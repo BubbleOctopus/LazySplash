@@ -1,6 +1,7 @@
 package com.liemng.library.anim;
 
 import android.view.View;
+import com.liemng.library.anim.LayersHolder.AnimType;
 
 /**
  * Created by limeng on 16-5-13.
@@ -11,11 +12,21 @@ public class TranslationAnim {
     private boolean isReverseShift;
     private int viewId;
     private float shiftCoefficient;
+    private AnimType animType;
 
-    public TranslationAnim(int viewId, boolean isReverseShift, float shiftCoefficient){
+    public TranslationAnim(int viewId, boolean isReverseShift, float shiftCoefficient, AnimType animType){
         this.isReverseShift = isReverseShift;
         this.viewId = viewId;
         this.shiftCoefficient = shiftCoefficient;
+        this.animType = animType;
+    }
+
+    public AnimType getAnimType() {
+        return animType;
+    }
+
+    public void setAnimType(AnimType animType) {
+        this.animType = animType;
     }
 
     public float getShiftCoefficient() {
